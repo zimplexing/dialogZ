@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./dialogZ.css">
+</head>
+<body>
+	<input type="button" id="dialogZ-btn" value="open" />
+	<div id="dialogZ" class="dialog">
+		<h2>这是一个测试的弹出框</h2>
+	</div>
+</body>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.js"></script>
+<script type="text/javascript" src="./modernizr.custom.js"></script>
+<script type="text/javascript" src="./dialogZ.js"></script>
+<script>
+	$('#dialogZ').dialogZ();
+	$('#dialogZ-btn').on('click',function(){
+		$('#dialogZ').dialogZ('toggle');
+	});
+</script>
+</html>
