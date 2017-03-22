@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="./dialogZ.css">
 </head>
+
 <body>
-	<input type="button" id="dialogZ-btn" value="open" />
+	<input type="button" id="dialogZ-open-btn" value="open" />
 	<div id="dialogZ" class="dialog">
 		<h2>这是一个测试的弹出框</h2>
+		<button id="dialogZ-close-btn">close</button>
 	</div>
 </body>
 <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.js"></script>
@@ -16,8 +19,12 @@
 <script type="text/javascript" src="./dialogZ.js"></script>
 <script>
 	$('#dialogZ').dialogZ();
-	$('#dialogZ-btn').on('click',function(){
-		$('#dialogZ').dialogZ('toggle');
+	$('#dialogZ-open-btn').on('click', function () {
+		$('#dialogZ').dialogZ('show');
+	});
+	$('#dialogZ-close-btn').on('click', function () {
+		$('#dialogZ').dialogZ('close');
 	});
 </script>
+
 </html>
