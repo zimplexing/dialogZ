@@ -9,21 +9,40 @@
 
 <body>
 	<input type="button" id="dialogZ-open-btn" value="open" />
-	<div id="dialogZ" class="dialog">
-		<h2>这是一个测试的弹出框</h2>
-		<button id="dialogZ-close-btn">close</button>
+	<input type="button" id="dialogZ-open-btn1" value="open" />
+	
+	<div id="dialogZ" class="dialog"></div>
+
+	<div id="dialogZ1" class="dialog">
+		<div class="dialog__overlay"></div>
+		<div class="dialog__content">
+			<h2>这是一个测试的弹出框</h2>
+		</div>	
 	</div>
 </body>
 <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.js"></script>
-<script type="text/javascript" src="./modernizr.custom.js"></script>
 <script type="text/javascript" src="./dialogZ.js"></script>
 <script>
-	$('#dialogZ').dialogZ();
+	$('#dialogZ').dialogZ({
+		content:'<h2>这是一个测试的弹出框</h2>',
+	});
+	$('#dialogZ1').dialogZ({
+		showButton:true,
+		onSureClick:function(){
+			console.log('111');
+		}
+	});
 	$('#dialogZ-open-btn').on('click', function () {
 		$('#dialogZ').dialogZ('show');
 	});
 	$('#dialogZ-close-btn').on('click', function () {
 		$('#dialogZ').dialogZ('close');
+	});
+	$('#dialogZ-open-btn1').on('click', function () {
+		$('#dialogZ1').dialogZ('show');
+	});
+	$('#dialogZ-close-btn1').on('click', function () {
+		$('#dialogZ1').dialogZ('close');
 	});
 </script>
 

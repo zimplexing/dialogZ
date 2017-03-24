@@ -17,6 +17,35 @@
 	pointer-events: none;
 }
 
+.dialog__button{
+	text-align: right;
+	padding-bottom: 4px;
+}
+
+.dialog__btn{
+	background: none;
+	border: 1px solid transparent;
+	padding: 6px 18px;
+	cursor: pointer;
+}
+
+.dialog__btn:hover{
+	border: 1px solid #2244e8;
+}
+
+.dialog_cancel{
+	background-color: #fff;
+}
+
+.dialog__sure{
+	background-color: #5871e8;
+	color:#fff;
+	margin-right: 10px;
+}
+dialog__sure:hover{
+	background-color: #2244e8;
+}
+
 .dialog__overlay {
 	position: absolute;
 	z-index: 1;
@@ -37,7 +66,7 @@
 	max-width: 560px;
 	min-width: 290px;
 	background: #fff;
-	padding: 4em;
+	padding: 4em 4em 1em 4em;
 	text-align: center;
 	position: relative;
 	z-index: 5;
