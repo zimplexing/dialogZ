@@ -1,13 +1,11 @@
 (function($) {
     //构造函数
     var DialogZ = function(element, options) {
-        //这边两个参数是从 new DialogZ(this,option) 中传过来的
         this.$element = $(element);
         this.options = options;
     };
     // 默认参数
     DialogZ.defaults = {
-        //timing for callbacks
         nDefaultTimeOpenDialog: 0,
         nDefaultTimeCloseDialog: 0,
         isOpen: false,
@@ -135,11 +133,9 @@
             if (typeof option === 'string') data[option](params);
         })
     }
-    //将`DialogZ`这个原型方法赋值给`old`,做一个备份,防止有其他插件名称也为`DialogZ`,而造成冲突
+    
     var old = $.fn.dialogZ
-    //对`DialogZ`的原型方法赋值
     $.fn.dialogZ = Plugin
-    //重新将`$.fn.DialogZ`的`Constructor`指向为插件的构造函数`DialogZ`,因为`Constructor`可以被认为的修改掉
     $.fn.dialogZ.Constructor = DialogZ
     //防止命名冲突
     $.fn.dialogZ.noConflict = function() {
